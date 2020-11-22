@@ -1,4 +1,4 @@
-##Laravel JavaScript Simple Translator
+## Laravel JavaScript Simple Translator
 
 **The problem**:
 
