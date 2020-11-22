@@ -70,3 +70,4 @@ function createMultidimensionalArray($keys, $initial, $includePath)
     return $initial;
 }
 
+restore_error_handler();
