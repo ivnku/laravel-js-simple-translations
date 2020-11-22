@@ -8,10 +8,12 @@ set_error_handler(function ($errno, $errstr, $errfile, $errline, $errcontext) {
     throw new ErrorException($errstr, 0, $errno, $errfile, $errline);
 });
 
-$path = [getcwd(), 'lang']; // path to your lang folder
+$resourcesRoot = implode(DIRECTORY_SEPARATOR, [getcwd(), 'resources']); // path to laravel resources folder
+$path = [$resourcesRoot, 'lang']; // path to your lang folder
 $translates = []; // array for result translations. used globally from scanForTranslates()
 
 try {
+    
     print_r(json_encode(scanForTranslates($path)));
 } catch (\Exception $e) {
     print('ERROR! ' . $e->getMessage());
